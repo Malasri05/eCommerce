@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Deals</title>
+    <link rel="stylesheet" href="catalog.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <script>
+        function handleSearch(event) {
+            event.preventDefault(); 
+            const searchInput = document.getElementById("searchInput");
+            const query = searchInput.value.toLowerCase(); 
+            localStorage.setItem("searchQuery", query);
+            searchInput.value = "";
+            const searchTerms = {
+                "girls": "girlkid.html",
+                "baby girl": "girlkid.html",
+                "dress": "girlkid.html",
+                "boys": "boykid.html",
+                "baby boy": "boykid.html",
+                "men": "men.html",
+                "women": "women.html",
+                "saree": "women.html",
+                "mobile": "mobile.html",
+                "apple": "mobile.html",
+                "vivo": "mobile.html",
+                "realme": "mobile.html",
+                "airpods": "mobile.html",
+                "furniture": "sofa.html",
+                "sofa": "sofa.html",
+                "chair": "sofa.html"
+            };
+
+            for (const term in searchTerms) {
+                if (query.includes(term)) {
+                    window.location.href = searchTerms[term];
+                    return;
+                }
+            }
+
+            alert("No results found for: " + query);
+        }
+
+
+
+    </script>
+    <nav class="fix-navbar">
+        <img src="./image/logoo.png" height="50px" class="logo-img">
+        <h3 class="navbar-title"><em>Blink Bazaar</em></h3>
+        <ul>
+            <li>
+                <form onsubmit="handleSearch(event)">
+                    <i class="fa fa-search icon" style="color: black; font-size: 21px;">
+                        <input type="text" id="searchInput" placeholder="Search for products and brands" class="input">
+                    </i>
+                </form>
+            </li>
+            <li><a href="index.html"> <i class="fa fa-home icon" style="color: black; font-size: 23px;"></i></a></li>
+            <li><a href="cart.html"><i class="fa fa-shopping-cart icon" style="color: black; font-size: 23px;"></i></a>
+            </li>
+        </ul>
+    </nav>
+    <h2>Mens Fashion</h2>
+    <div class="cover column">
+        <div class="box">
+            <img class="img" src="./image/Men Solid Cotton Blend Straight Kurta  (White).webp" alt="Men Solid Cotton Blend Straight Kurta  (White)">
+            <h3>Men Solid Cotton Blend Straight Kurta (White)</h3>
+            
+            <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                <p>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                </p>
+                <p>₹399</p>
+            </div>
+    
+            <button class="add-to-cart" 
+                    data-name="Men Solid Cotton Blend Straight Kurta (White)" 
+                    data-price="399" 
+                    data-image="./image/Men Solid Cotton Blend Straight Kurta  (White).webp">
+                Add to Cart
+            </button>
+        </div>
+    
+        <div class="box">
+            <img class="img" src="./image/Men Printed Hooded Neck Cotton Blend Black, Light Green T-Shirt.webp"
+                alt="Men Printed Hooded Neck Cotton Blend Black, Light Green T-Shirt">
+            <h3>Men Printed Hooded Neck Cotton Blend Black, Light Green T-Shirt</h3>
+            
+            <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                <p>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                </p>
+                <p>₹299</p>
+            </div>
+    
+            <button class="add-to-cart" 
+                    data-name="Men Printed Hooded Neck Cotton Blend Black, Light Green T-Shirt" 
+                    data-price="299" 
+                    data-image="./image/Men Printed Hooded Neck Cotton Blend Black, Light Green T-Shirt.webp">
+                Add to Cart
+            </button>
+        </div>
+    
+        <div class="box">
+            <img class="img" src="./image/Men Loose Fit Mid Rise Black Jeans.webp" alt="Men Loose Fit Mid Rise Black Jeans">
+            <h3>Men Loose Fit Mid Rise Black Jeans</h3>
+            
+            <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                <p>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                </p>
+                <p>₹699</p>
+            </div>
+    
+            <button class="add-to-cart" 
+                    data-name="Men Loose Fit Mid Rise Black Jeans" 
+                    data-price="699" 
+                    data-image="./image/Men Loose Fit Mid Rise Black Jeans.webp">
+                Add to Cart
+            </button>
+        </div>
+    
+        <div class="box">
+            <img class="img" src="./image/Solid Men Dhoti.webp" alt="Solid Men Dhoti">
+            <h3>Solid Men Dhoti</h3>
+            
+            <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                <p>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                </p>
+                <p>₹404</p>
+            </div>
+    
+            <button class="add-to-cart" 
+                    data-name="Solid Men Dhoti" 
+                    data-price="404" 
+                    data-image="./image/Solid Men Dhoti.webp">
+                Add to Cart
+            </button>
+        </div>
+    </div>
+    
+    
+    <h2>Women Fashion</h2>
+    <div class="cover column">
+        <div class="box">
+            <img class="img" src="./image/Casual Regular Sleeves Solid Women Multicolor Top.webp" alt="Casual Regular Sleeves Solid Women Multicolor Top">
+            <h3>Casual Regular Sleeves Solid Women Multicolor Top</h3>
+            
+            <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                <p>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                </p>
+                <p>₹237</p>
+            </div>
+    
+            <button class="add-to-cart" 
+                    data-name="Casual Regular Sleeves Solid Women Multicolor Top" 
+                    data-price="237" 
+                    data-img="./image/Casual Regular Sleeves Solid Women Multicolor Top.webp">
+                Add to Cart
+            </button>
+        </div>
+    
+        <div class="box">
+            <img class="img" src="./image/Casual Puff Sleeves Floral Print Women Black Top.webp" alt="Casual Puff Sleeves Floral Print Women Black Top">
+            <h3>Casual Puff Sleeves Floral Print Women Black Top</h3>
+            
+            <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                <p>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                </p>
+                <p>₹255</p>
+            </div>
+    
+            <button class="add-to-cart" 
+                    data-name="Casual Puff Sleeves Floral Print Women Black Top" 
+                    data-price="255" 
+                    data-img="./image/Casual Puff Sleeves Floral Print Women Black Top.webp">
+                Add to Cart
+            </button>
+        </div>
+    
+        <div class="box">
+            <img class="img" src="./image/Pack of 3 Printed Women Multicolor Basic Shorts.webp" alt="Pack of 3 Printed Women Multicolor Basic Shorts">
+            <h3>Pack of 3 Printed Women Multicolor Basic Shorts</h3>
+            
+            <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                <p>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                </p>
+                <p>₹371</p>
+            </div>
+    
+            <button class="add-to-cart" 
+                    data-name="Pack of 3 Printed Women Multicolor Basic Shorts" 
+                    data-price="371" 
+                    data-img="./image/Pack of 3 Printed Women Multicolor Basic Shorts.webp">
+                Add to Cart
+            </button>
+        </div>
+    
+        <div class="box">
+            <img class="img" src="./image/Embellished Bollywood Georgette Saree  (Black).webp" alt="Embellished Bollywood Georgette Saree (Black)">
+            <h3>Embellished Bollywood Georgette Saree (Black)</h3>
+            
+            <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                <p>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                </p>
+                <p>₹499</p>
+            </div>
+    
+            <button class="add-to-cart" 
+                    data-name="Embellished Bollywood Georgette Saree (Black)" 
+                    data-price="499" 
+                    data-img="./image/Embellished Bollywood Georgette Saree  (Black).webp">
+                Add to Cart
+            </button>
+        </div>
+    </div>
+    
+
+    <h2>Kids Fashion</h2>
+    <div class="cover column">
+        <div class="box">
+            <img class="img" src="./image/Girls Party(Festive) Jacket Skirt  (Purple).webp" alt="Girls Party(Festive) Jacket Skirt (Purple)">
+            <h3>Girls Party(Festive) Jacket Skirt (Purple)</h3>
+    
+            <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                <p>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                </p>
+                <p>₹499</p>
+            </div>
+    
+            <button class="add-to-cart" 
+                    data-name="Girls Party(Festive) Jacket Skirt (Purple)" 
+                    data-price="499" 
+                    data-img="./image/Girls Party(Festive) Jacket Skirt  (Purple).webp">
+                Add to Cart
+            </button>
+        </div>
+    
+        <div class="box">
+            <img class="img" src="./image/Baby Girls Casual Top Skirt  (Black).webp" alt="Baby Girls Casual Top Skirt (Black)">
+            <h3>Baby Girls Casual Top Skirt (Black)</h3>
+    
+            <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                <p>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                </p>
+                <p>₹199</p>
+            </div>
+    
+            <button class="add-to-cart" 
+                    data-name="Baby Girls Casual Top Skirt (Black)" 
+                    data-price="199" 
+                    data-img="./image/Baby Girls Casual Top Skirt  (Black).webp">
+                Add to Cart
+            </button>
+        </div>
+    
+        <div class="box">
+            <img class="img" src="./image/Baby Boys Party(Festive) Shirt Pant, Bow Tie, Jacket  (Blue).webp" alt="Baby Boys Party(Festive) Shirt Pant, Bow Tie, Jacket (Blue)">
+            <h3>Baby Boys Party(Festive) Shirt Pant, Bow Tie, Jacket (Blue)</h3>
+    
+            <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                <p>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                </p>
+                <p>₹459</p>
+            </div>
+    
+            <button class="add-to-cart" 
+                    data-name="Baby Boys Party(Festive) Shirt Pant, Bow Tie, Jacket (Blue)" 
+                    data-price="459" 
+                    data-image="./image/Baby Boys Party(Festive) Shirt Pant, Bow Tie, Jacket  (Blue).webp">
+                Add to Cart
+            </button>
+        </div>
+    
+        <div class="box">
+            <img class="img" src="./image/Baby Boys  Casual T-shirt Track Pants  (Light Blue).webp" alt="Baby Boys Casual T-shirt Track Pants (Light Blue)">
+            <h3>Baby Boys Casual T-shirt Track Pants (Light Blue)</h3>
+    
+            <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                <p>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                </p>
+                <p>₹209</p>
+            </div>
+    
+            <button class="add-to-cart" 
+                    data-name="Baby Boys Casual T-shirt Track Pants (Light Blue)" 
+                    data-price="209" 
+                    data-image="./image/Baby Boys  Casual T-shirt Track Pants  (Light Blue).webp">
+                Add to Cart
+            </button>
+        </div>
+    </div>
+    
+    <h2>Furniture Collection</h2>
+    <div class="cover column">
+        <div class="box">
+            <img class="img" src="./image/Field Leather 4-Piece Sectional Lounger.jpeg" alt="Field Leather 4-Piece Sectional Lounger">
+            <h3>Field Leather 4-Piece Sectional Lounger</h3>
+    
+            <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                <p>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                </p>
+                <p>₹2999</p>
+            </div>
+    
+            <button class="add-to-cart" data-name="Field Leather 4-Piece Sectional Lounger" data-price="2999" data-image="./image/Field Leather 4-Piece Sectional Lounger.jpeg">
+                Add to Cart
+            </button>
+        </div>
+    
+        <div class="box">
+            <img class="img" src="./image/Field Ottoman.jpeg" alt="Field Ottoman">
+            <h3>Field Ottoman</h3>
+    
+            <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                <p>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                </p>
+                <p>₹999</p>
+            </div>
+    
+            <button class="add-to-cart" data-name="Field Ottoman" data-price="499-599" data-image="./image/Field Ottoman.jpeg">
+                Add to Cart
+            </button>
+        </div>
+    
+        <div class="box">
+            <img class="img" src="./image/Vesper Leather & Wood Lounge Chair.jpeg" alt="Vesper Leather & Wood Lounge Chair">
+            <h3>Vesper Leather & Wood Lounge Chair</h3>
+    
+            <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                <p>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                </p>
+                <p>₹1999</p>
+            </div>
+    
+            <button class="add-to-cart" data-name="Vesper Leather & Wood Lounge Chair" data-price="999-1999" data-image="./image/Vesper Leather & Wood Lounge Chair.jpeg">
+                Add to Cart
+            </button>
+        </div>
+    
+        <div class="box">
+            <img class="img" src="./image/Block Nomad Sofa.jpeg" alt="Block Nomad Sofa">
+            <h3>Block Nomad Sofa</h3>
+    
+            <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                <p>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                    <i class="fa fa-star" style="color: goldenrod;"></i>
+                </p>
+                <p>₹1699</p>
+            </div>
+    
+            <button class="add-to-cart" data-name="Block Nomad Sofa" data-price="1699" data-image="./image/Block Nomad Sofa.jpeg">
+                Add to Cart
+            </button>
+        </div>
+    </div>
+    <h2>Electronic Gadgets</h2>
+<div class="cover column">
+    <!-- Gadget 1 -->
+    <div class="box">
+        <img class="img" src="./image/Vivo V40 5G (Ganges Blue,128 GB).jpeg" alt="Vivo V40 5G (Ganges Blue,128 GB)">
+        <h4>Vivo V40 5G (Ganges Blue,128 GB)</h4>
+
+        <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+            <p>
+                <i class="fa fa-star" style="color: goldenrod;"></i>
+                <i class="fa fa-star" style="color: goldenrod;"></i>
+                <i class="fa fa-star" style="color: goldenrod;"></i>
+                <i class="fa fa-star" style="color: goldenrod;"></i>
+            </p>
+            <p>₹34,999</p>
+        </div>
+
+        <button class="add-to-cart" data-name="Vivo V40 5G (Ganges Blue,128 GB)" data-price="34999" data-image="./image/Vivo V40 5G (Ganges Blue,128 GB).jpeg">Add to Cart</button>
+    </div>
+
+    <!-- Gadget 2 -->
+    <div class="box">
+        <img class="img" src="./image/realme 12 Pro+ 5G(Explorer Red,256 GB).jpeg" alt="realme 12 Pro+ 5G(Explorer Red,256 GB)">
+        <h4>realme 12 Pro+ 5G(Explorer Red,256 GB)</h4>
+
+        <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+            <p>
+                <i class="fa fa-star" style="color: goldenrod;"></i>
+                <i class="fa fa-star" style="color: goldenrod;"></i>
+                <i class="fa fa-star" style="color: goldenrod;"></i>
+                <i class="fa fa-star" style="color: goldenrod;"></i>
+                <i class="fa fa-star" style="color: goldenrod;"></i>
+            </p>
+            <p>₹26,999</p>
+        </div>
+
+        <button class="add-to-cart" data-name="realme 12 Pro+ 5G(Explorer Red,256 GB)" data-price="26999" data-image="./image/realme 12 Pro+ 5G(Explorer Red,256 GB).jpeg">Add to Cart</button>
+    </div>
+
+    <!-- Gadget 3 -->
+    <div class="box">
+        <img class="img" src="./image/Apple iphone 16 Pro Max (Black Titanium, 512 GB)1.jpeg" alt="Apple iphone 16 Pro Max (Black Titanium, 512 GB)">
+        <h4>Apple iphone 16 Pro Max (Black Titanium, 512 GB)</h4>
+
+        <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+            <p>
+                <i class="fa fa-star" style="color: goldenrod;"></i>
+                <i class="fa fa-star" style="color: goldenrod;"></i>
+                <i class="fa fa-star" style="color: goldenrod;"></i>
+            </p>
+            <p>₹1,65,999</p>
+        </div>
+
+        <button class="add-to-cart" data-name="Apple iphone 16 Pro Max (Black Titanium, 512 GB)" data-price="165999" data-image="./image/Apple iphone 16 Pro Max (Black Titanium, 512 GB)1.jpeg">Add to Cart</button>
+    </div>
+
+    <!-- Gadget 4 -->
+    <div class="box">
+        <img class="img" src="./image/Apple iphone 15 Plus(Blue,128 GB).jpeg" alt="Apple iphone 15 Plus(Blue,128 GB)">
+        <h4>Apple iphone 15 Plus(Blue,128 GB)</h4>
+
+        <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+            <p>
+                <i class="fa fa-star" style="color: goldenrod;"></i>
+                <i class="fa fa-star" style="color: goldenrod;"></i>
+                <i class="fa fa-star" style="color: goldenrod;"></i>
+                <i class="fa fa-star" style="color: goldenrod;"></i>
+            </p>
+            <p>₹72,999</p>
+        </div>
+
+        <button class="add-to-cart" data-name="Apple iphone 15 Plus(Blue,128 GB)" data-price="72999" data-image="./image/Apple iphone 15 Plus(Blue,128 GB).jpeg">Add to Cart</button>
+    </div>
+</div>
+
+<div class="cover column">
+    <!-- Gadget 5 -->
+    <div class="box">
+        <img class="img" src="./image/Acer laptop.webp" alt="Acer Swift Go 14 TouchScreen AI PC">
+        <h4>Acer Swift Go 14 TouchScreen AI PC Intel Core Ultra 7 155H - (16 GB/1 TB SSD/Windows 11 Home) SFG14-73T-70N9 Thin and Light Laptop (14 Inch, Pure Silver, 1.3 Kg, With MS Office)</h4>
+
+        <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+            <p>
+                <i class="fa fa-star" style="color: goldenrod;"></i>
+                <i class="fa fa-star" style="color: goldenrod;"></i>
+                <i class="fa fa-star" style="color: goldenrod;"></i>
+            </p>
+            <p>₹83,999</p>
+        </div>
+
+        <button class="add-to-cart" data-name="Acer Swift Go 14" data-price="83999" data-img="./image/Acer laptop.webp">Add to Cart</button>
+    </div>
+
+    <!-- Gadget 6 -->
+    <div class="box">
+        <img class="img" src="./image/xiaomi tv.webp" alt="Mi by Xiaomi X Series">
+        <h4>Mi by Xiaomi X Series 138 cm (55 inch) Ultra HD (4K) LED Smart Google TV with 4K Dolby Vision | HDR 10 | Dolby Audio |,DTS X | DTS Virtual: X | Vivid Picture Engine</h4>
+
+        <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+            <p>
+                <i class="fa fa-star" style="color: goldenrod;"></i>
+                <i class="fa fa-star" style="color: goldenrod;"></i>
+                <i class="fa fa-star" style="color: goldenrod;"></i>
+            </p>
+            <p>₹50,999</p>
+        </div>
+
+        <button class="add-to-cart" data-name="Mi by Xiaomi X Series" data-price="50999" data-img="./image/xiaomi tv.webp">Add to Cart</button>
+    </div>
+
+    <!-- Gadget 7 -->
+    <div class="box">
+        <img class="img" src="./image/oneplus head.webp" alt="OnePlus Bullets Wireless Z2">
+        <h4>OnePlus Bullets Wireless Z2 Bluetooth (Magico Black, In the Ear)</h4>
+
+        <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+            <p>
+                <i class="fa fa-star" style="color: goldenrod;"></i>
+                <i class="fa fa-star" style="color: goldenrod;"></i>
+                <i class="fa fa-star" style="color: goldenrod;"></i>
+            </p>
+            <p>₹1,399</p>
+        </div>
+
+        <button class="add-to-cart" data-name="OnePlus Bullets Wireless Z2" data-price="1399" data-img="./image/oneplus head.webp">Add to Cart</button>
+    </div>
+
+    <!-- Gadget 8 -->
+    <div class="box">
+        <img class="img" src="./image/Hp laptop.webp" alt="HP Intel Core i5 12th Gen 1235U">
+        <h4>HP Intel Core i5 12th Gen 1235U - (16 GB/512 GB SSD/Windows 11 Home) 15s-fq5330TU|15-fd0111TU Thin and Light Laptop (15.6 inch, Star Black, 1.69 Kg, With MS Office)</h4>
+
+        <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+            <p>
+                <i class="fa fa-star" style="color: goldenrod;"></i>
+                <i class="fa fa-star" style="color: goldenrod;"></i>
+            </p>
+            <p>₹49,999</p>
+        </div>
+
+        <button class="add-to-cart" data-name="HP Intel Core i5 12th Gen 1235U" data-price="49999" data-img="./image/Hp laptop.webp">Add to Cart</button>
+    </div>
+</div>
+
+    <script>
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = {
+                    name: button.getAttribute('data-name'),
+                    price: parseFloat(button.getAttribute('data-price')),
+                    image: button.getAttribute('data-image'),
+                    dateAdded: new Date().toLocaleString()
+                };
+
+                const cart = JSON.parse(localStorage.getItem("cart")) || [];
+                cart.push(item);
+                localStorage.setItem("cart", JSON.stringify(cart));
+
+                alert(`${item.name} has been added to your cart.`);
+            });
+        });
+    </script>
+</body>
+
+</html>

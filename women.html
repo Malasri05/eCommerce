@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women</title>
+    <link rel="stylesheet" href="catalog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <script>
+        function handleSearch(event) {
+            event.preventDefault(); 
+            const searchInput = document.getElementById("searchInput");
+            const query = searchInput.value.toLowerCase(); 
+            localStorage.setItem("searchQuery", query);
+            searchInput.value = "";
+            const searchTerms = {
+                "girls": "girlkid.html",
+                "baby girl": "girlkid.html",
+                "dress": "girlkid.html",
+                "boys": "boykid.html",
+                "baby boy": "boykid.html",
+                "men": "men.html",
+                "women": "women.html",
+                "saree": "women.html",
+                "mobile": "mobile.html",
+                "apple": "mobile.html",
+                "vivo": "mobile.html",
+                "realme": "mobile.html",
+                "airpods": "mobile.html",
+                "furniture": "sofa.html",
+                "sofa": "sofa.html",
+                "chair": "sofa.html"
+            };
+
+            for (const term in searchTerms) {
+                if (query.includes(term)) {
+                    window.location.href = searchTerms[term];
+                    return;
+                }
+            }
+
+            alert("No results found for: " + query);
+        }
+
+
+
+    </script>
+    <div>
+        <nav class="fix-navbar">
+            <img src="./image/logoo.png" height="50px" class="logo-img">
+            <h3 class="navbar-title"><em>Blink Bazaar</em></h3>
+            <ul>
+                <li>
+                    <form onsubmit="handleSearch(event)">
+                        <i class="fa fa-search icon" style="color: black; font-size: 21px;">
+                            <input type="text" id="searchInput" placeholder="Search for products and brands" class="input">
+                        </i>
+                    </form>
+                </li>
+                <li><a href="index.html"> <i class="fa fa-home icon" style="color: black; font-size: 23px;"></i></a></li>
+                <li><a href="cart.html"><i class="fa fa-shopping-cart icon" style="color: black; font-size: 23px;"></i></a>
+                </li>
+            </ul>
+        </nav>
+        <h2>Top Wear</h2>
+        <div class="cover column">
+            <div class="box">
+    <img class="img" src="./image/Women Regular Fit Solid Casual Shirt.webp" alt="Women Regular Fit Solid Casual Shirt">
+    <h3>Women Regular Fit Solid Casual Shirt</h3>
+    <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+        <p>
+            <i class="fa fa-star" style="color: goldenrod;"></i>
+            <i class="fa fa-star" style="color: goldenrod;"></i>
+            <i class="fa fa-star-half-alt" style="color: goldenrod;"></i>
+        </p>
+        <p>₹289</p>
+    </div>
+    <button class="add-to-cart" data-name="Women Regular Fit Solid Casual Shirt" data-price="289" data-img="./image/Women Regular Fit Solid Casual Shirt.webp">Add to Cart</button>
+</div>
+<div class="box">
+    <img class="img" src="./image/Casual Puff Sleeves Floral Print Women Black Top.webp" alt="Casual Puff Sleeves Floral Print Women Black Top">
+    <h3>Casual Puff Sleeves Floral Print Women Black Top</h3>
+    <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+        <p>
+            <i class="fa fa-star" style="color: goldenrod;"></i>
+            <i class="fa fa-star" style="color: goldenrod;"></i>
+            <i class="fa fa-star" style="color: goldenrod;"></i>
+        </p>
+        <p>₹255</p>
+    </div>
+    <button class="add-to-cart" data-name="Casual Puff Sleeves Floral Print Women Black Top" data-price="255" data-img="./image/Casual Puff Sleeves Floral Print Women Black Top.webp">Add to Cart</button>
+</div>
+<div class="box">
+    <img class="img" src="./image/Casual Regular Sleeves Solid Women Multicolor Top.webp" alt="Casual Regular Sleeves Solid Women Multicolor Top">
+    <h3>Casual Regular Sleeves Solid Women Multicolor Top</h3>
+    <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+        <p>
+            <i class="fa fa-star" style="color: goldenrod;"></i>
+            <i class="fa fa-star" style="color: goldenrod;"></i>
+            <i class="fa fa-star-half-alt" style="color: goldenrod;"></i>
+        </p>
+        <p>₹237</p>
+    </div>
+    <button class="add-to-cart" data-name="Casual Regular Sleeves Solid Women Multicolor Top" data-price="237" data-img="./image/Casual Regular Sleeves Solid Women Multicolor Top.webp">Add to Cart</button>
+</div>
+<div class="box">
+    <img class="img" src="./image/Women Regular Fit Solid Cut Away Collar Casual Shirt.webp" alt="Women Regular Fit Solid Cut Away Collar Casual Shirt">
+    <h3>Women Regular Fit Solid Cut Away Collar Casual Shirt</h3>
+    <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+        <p>
+            <i class="fa fa-star" style="color: goldenrod;"></i>
+            <i class="fa fa-star" style="color: goldenrod;"></i>
+            <i class="fa fa-star" style="color: goldenrod;"></i>
+        </p>
+        <p>₹285</p>
+    </div>
+    <button class="add-to-cart" data-name="Women Regular Fit Solid Cut Away Collar Casual Shirt" data-price="285" data-img="./image/Women Regular Fit Solid Cut Away Collar Casual Shirt.webp">Add to Cart</button>
+</div>
+<div class="box">
+    <img class="img" src="./image/Women Regular Fit Solid Spread Collar Casual Shirt.webp" alt="Women Regular Fit Solid Spread Collar Casual Shirt">
+    <h3>Women Regular Fit Solid Spread Collar Casual Shirt</h3>
+    <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+        <p>
+            <i class="fa fa-star" style="color: goldenrod;"></i>
+            <i class="fa fa-star" style="color: goldenrod;"></i>
+            <i class="fa fa-star-half-alt" style="color: goldenrod;"></i>
+        </p>
+        <p>₹239</p>
+    </div>
+    <button class="add-to-cart" data-name="Women Regular Fit Solid Spread Collar Casual Shirt" data-price="239" data-img="./image/Women Regular Fit Solid Spread Collar Casual Shirt.webp">Add to Cart</button>
+</div>
+<div class="box">
+    <img class="img" src="./image/Women Regular Fit Checkered Casual Shirt.webp" alt="Women Regular Fit Checkered Casual Shirt">
+    <h3>Women Regular Fit Checkered Casual Shirt</h3>
+    <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+        <p>
+            <i class="fa fa-star" style="color: goldenrod;"></i>
+            <i class="fa fa-star" style="color: goldenrod;"></i>
+            <i class="fa fa-star" style="color: goldenrod;"></i>
+            <i class="fa fa-star-half-alt" style="color: goldenrod;"></i>
+        </p>
+        <p>₹797</p>
+    </div>
+    <button class="add-to-cart" data-name="Women Regular Fit Checkered Casual Shirt" data-price="797" data-img="./image/Women Regular Fit Checkered Casual Shirt.webp">Add to Cart</button>
+</div>
+
+            <div class="box">
+                <img class="img" src="./image/Casual Regular Sleeves Printed Women Multicolor Top.webp" alt="Casual Regular Sleeves Printed Women Multicolor Top">
+                <h3>Casual Regular Sleeves Printed Women Multicolor Top</h3>
+                <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                    <p>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star-half-alt" style="color: goldenrod;"></i>
+                    </p>
+                    <p>₹292</p>
+                </div>
+                <button class="add-to-cart" data-name="Casual Regular Sleeves Printed Women Multicolor Top" data-price="292" data-img="./image/Casual Regular Sleeves Printed Women Multicolor Top.webp">Add to Cart</button>
+            </div>
+            <div class="box">
+                <img class="img" src="./image/Women Solid Viscose Rayon Flared Kurta  (Blue).webp" alt="Women Solid Viscose Rayon Flared Kurta (Blue)">
+                <h3>Women Solid Viscose Rayon Flared Kurta (Blue)</h3>
+                <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                    <p>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star-half-alt" style="color: goldenrod;"></i>
+                    </p>
+                    <p>₹310</p>
+                </div>
+                <button class="add-to-cart" data-name="Women Solid Viscose Rayon Flared Kurta (Blue)" data-price="310" data-img="./image/Women Solid Viscose Rayon Flared Kurta  (Blue).webp">Add to Cart</button>
+            </div>
+            <div class="box">
+                <img class="img" src="./image/Women Printed, Striped, Geometric Print Viscose Rayon Anarkali Kurta  (Blue)1.webp" alt="Women Printed, Striped, Geometric Print Viscose Rayon Anarkali Kurta (Blue)">
+                <h3>Women Printed, Striped, Geometric Print Viscose Rayon Anarkali Kurta (Blue)</h3><div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                    <p>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star-half-alt" style="color: goldenrod;"></i>
+                    </p>
+                    <p>₹499</p>
+                </div>
+                <button class="add-to-cart" data-name="Women Printed, Striped, Geometric Print Viscose Rayon Anarkali Kurta (Blue)" data-price="499" data-img="./image/Women Printed, Striped, Geometric Print Viscose Rayon Anarkali Kurta  (Blue)1.webp">Add to Cart</button>
+            </div>
+            <div class="box">
+                <img class="img" src="./image/Embellished Bollywood Georgette Saree  (Black).webp" alt="Embellished Bollywood Georgette Saree (Black)">
+                <h3>Embellished Bollywood Georgette Saree (Black)</h3>
+                <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                    <p>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                    </p>
+                    <p>₹499</p>
+                </div>
+                <button class="add-to-cart" data-name="Embellished Bollywood Georgette Saree (Black)" data-price="499" data-img="./image/Embellished Bollywood Georgette Saree  (Black).webp">Add to Cart</button>
+            </div>
+            <div class="box">
+                <img class="img" src="./image/Self Design, Embellished Bollywood Georgette Saree  (Red).webp" alt="Self Design, Embellished Bollywood Georgette Saree (Red)">
+                <h3>Self Design, Embellished Bollywood Georgette Saree (Red)</h3>
+                <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                    <p>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                    </p>
+                    <p>₹1,349</p>
+                </div>
+                <button class="add-to-cart" data-name="Self Design, Embellished Bollywood Georgette Saree (Red)" data-price="1349" data-img="./image/Self Design, Embellished Bollywood Georgette Saree  (Red).webp">Add to Cart</button>
+            </div>
+            <div class="box">
+                <img class="img" src="./image/Floral Print, Geometric Print, Embellished Daily Wear Cotton Blend Saree  (Grey, Pink).webp" alt="Floral Print, Geometric Print, Embellished Daily Wear Cotton Blend Saree (Grey, Pink)">
+                <h3>Floral Print, Geometric Print, Embellished Daily Wear Cotton Blend Saree (Grey, Pink)</h3>
+                <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                    <p>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                    </p>
+                    <p>₹309</p>
+                </div>
+                <button class="add-to-cart" data-name="Floral Print, Geometric Print, Embellished Daily Wear Cotton Blend Saree (Grey, Pink)" data-price="309" data-img="./image/Floral Print, Geometric Print, Embellished Daily Wear Cotton Blend Saree  (Grey, Pink).webp">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h2>Bottom Wear</h2>
+        <div class="cover column">
+            <div class="box">
+                <img class="img" src="./image/Pack of 3 Printed Women Multicolor Basic Shorts.webp" alt="Pack of 3 Printed Women Multicolor Basic Shorts">
+                <h3>Pack of 3 Printed Women Multicolor Basic Shorts</h3>
+                <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                    <p>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                    </p>
+                    <p>₹371</p>
+                </div>
+                <button class="add-to-cart" data-name="Pack of 3 Printed Women Multicolor Basic Shorts" data-price="371" data-img="./image/Pack of 3 Printed Women Multicolor Basic Shorts.webp">Add to Cart</button>
+            </div>
+            <div class="box">
+                <img class="img" src="./image/Solid Women Denim Blue Denim Shorts.webp" alt="Solid Women Denim Blue Denim Shorts">
+                <h3>Solid Women Denim Blue Denim Shorts</h3>
+                <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                    <p>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                    </p>
+                    <p>₹399</p>
+                </div>
+                <button class="add-to-cart" data-name="Solid Women Denim Blue Denim Shorts" data-price="399" data-img="./image/Solid Women Denim Blue Denim Shorts.webp">Add to Cart</button>
+            </div>
+            <div class="box">
+                <img class="img" src="./image/Solid Women Grey Regular Shorts.webp" alt="Men Loose Fit Mid Rise Black Jeans">
+                <h3>Solid Women Grey Regular Shorts</h3>
+                <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                    <p>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                    </p>
+                    <p>₹291</p>
+                </div>
+                <button class="add-to-cart" data-name="Solid Women Grey Regular Shorts" data-price="291" data-img="./image/Solid Women Grey Regular Shorts.webp">Add to Cart</button>
+            </div>
+            <div class="box">
+                <img class="img" src="./image/Women Self Design A-line Light Blue Skirt.webp" alt="Women Self Design A-line Light Blue Skirt">
+                <h3>Women Self Design A-line Light Blue Skirt</h3>
+                <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                    <p>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                    </p>
+                    <p>₹454</p>
+                </div>
+                <button class="add-to-cart" data-name="Women Self Design A-line Light Blue Skirt" data-price="454" data-img="./image/Women Self Design A-line Light Blue Skirt.webp">Add to Cart</button>
+            </div>
+            <div class="box">
+                <img class="img" src="./image/Women Printed Pleated Beige Skirt.webp" alt="Women Printed Pleated Beige Skirt">
+                <h3>Women Printed Pleated Beige Skirt</h3>
+                <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                    <p>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                    </p>
+                    <p>₹339</p>
+                </div>
+                <button class="add-to-cart" data-name="Women Printed Pleated Beige Skirt" data-price="339" data-img="./image/Women Printed Pleated Beige Skirt.webp">Add to Cart</button>
+            </div>
+            <div class="box">
+                <img class="img" src="./image/Women Striped Asymetric Black Skirt.webp" alt="Women Striped Asymetric Black Skirt">
+                <h3>Women Striped Asymetric Black Skirt</h3>
+                <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                    <p>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                    </p>
+                    <p>₹399</p>
+                </div>
+                <button class="add-to-cart" data-name="Women Striped Asymetric Black Skirt" data-price="399" data-img="./image/Women Striped Asymetric Black Skirt.webp">Add to Cart</button>
+            </div>
+            <div class="box">
+                <img class="img" src="./image/Black Women Straight Fit High Rise Black Jeans.webp" alt="Black Women Straight Fit High Rise Black Jeans">
+                <h3>Black Women Straight Fit High Rise Black Jeans</h3>
+                <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                    <p>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                    </p>
+                    <p>₹679</p>
+                </div>
+                <button class="add-to-cart" data-name="Black Women Straight Fit High Rise Black Jeans" data-price="679" data-img="./image/Black Women Straight Fit High Rise Black Jeans.webp">Add to Cart</button>
+            </div>
+            <div class="box">
+                <img class="img" src="./image/Women Skinny Low Rise Blue Jeans.webp" alt="Women Skinny Low Rise Blue Jeans">
+                <h3>Women Skinny Low Rise Blue Jeans</h3>
+                <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                    <p>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                    </p>
+                    <p>₹1,349</p>
+                </div>
+                <button class="add-to-cart" data-name="Women Skinny Low Rise Blue Jeans" data-price="1349" data-img="./image/Women Skinny Low Rise Blue Jeans.webp">Add to Cart</button>
+            </div>
+            <div class="box">
+                <img class="img" src="./image/Women Flared Mid Rise Blue Jeans.webp" alt="Women Flared Mid Rise Blue Jeans">
+                <h3>Women Flared Mid Rise Blue Jeans</h3>
+                <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                    <p>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                    </p>
+                    <p>₹699</p>
+                </div>
+                <button class="add-to-cart" data-name="Women Flared Mid Rise Blue Jeans" data-price="699" data-img="./image/Women Flared Mid Rise Blue Jeans.webp">Add to Cart</button>
+            </div>
+            <div class="box">
+                <img class="img" src="./image/Solid Women Black Tights.webp" alt="Solid Women Black Tights">
+                <h3>Solid Women Black Tights</h3>
+                <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                    <p>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                    </p>
+                    <p>₹494</p>
+                </div>
+                <button class="add-to-cart" data-name="Solid Women Black Tights" data-price="494" data-img="./image/Solid Women Black Tights.webp">Add to Cart</button>
+            </div>
+            <div class="box">
+                <img class="img" src="./image/3BUTTERFLIES Grey Jegging  (Solid).webp" alt="3BUTTERFLIES Grey Jegging  (Solid)">
+                <h3>3BUTTERFLIES Grey Jegging (Solid)</h3>
+                <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                    <p>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                    </p>
+                    <p>₹329</p>
+                </div>
+                <button class="add-to-cart" data-name="3BUTTERFLIES Grey Jegging (Solid)" data-price="329" data-img="./image/3BUTTERFLIES Grey Jegging  (Solid).webp">Add to Cart</button>
+            </div>
+            <div class="box">
+                <img class="img" src="./image/Women Blue Capri.webp" alt="Women Blue Capri">
+                <h3>Women Blue Capri</h3>
+                <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                    <p>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                    </p>
+                    <p>₹334</p>
+                </div>
+               
+                <button class="add-to-cart" data-name="Women Blue Capri" data-price="334" data-img="./image/Women Blue Capri.webp">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+<script>
+document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', () => {
+        const item = {
+            name: button.getAttribute('data-name'),
+            price: parseFloat(button.getAttribute('data-price')),
+            image: button.getAttribute('data-img'),
+            dateAdded: new Date().toLocaleString()
+        };
+
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push(item);
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        alert(`${item.name} has been added to your cart.`);
+    });
+});
+</script>
+</body>
+</html>

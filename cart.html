@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+
+<body>
+
+    <div class="cart">
+        <h2>Your Cart</h2>
+        <ul class="cart-list" id="cartItems"></ul>
+
+        <div class="cart-summary">
+            <h3 id="totalAmount">Total: ₹0.00</h3>
+
+            <h3>Shipping Information</h3>
+            <form class="checkout-form" id="checkoutForm">
+                <input type="text" name="name" placeholder="Full Name" required />
+                <input type="text" name="address" placeholder="Address" required />
+                <input type="email" name="email" placeholder="Email" required />
+                <input type="tel" name="phone" placeholder="Phone Number" required />
+
+                <h3>Any Preference for Date of Delivery</h3>
+                <select name="preference" id="preferenceSelect" required>
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                </select>
+
+                <input type="datetime-local" name="date" id="deliveryDate" placeholder="Delivery Date" style="display: none;" />
+
+                <h3>Payment Details</h3>
+                <select name="paymentMethod" required>
+                    <option value="">Select Payment Method</option>
+                    <option value="Credit Card">Credit Card</option>
+                    <option value="Debit Card">Debit Card</option>
+                    <option value="UPI">UPI</option>
+                </select>
+                <input type="text" name="cardNumber" placeholder="Card Number" />
+                <input type="text" name="expiryDate" placeholder="Expiry Date (MM/YY)" />
+                <input type="text" name="cvv" placeholder="CVV" />
+
+                <button type="button" class="place-order-btn">Place Order</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="order-confirmation" style="display: none; text-align: center; margin-top: 20px;">
+        <h2>Thank you for your order!</h2>
+        <p>Your order has been placed successfully.</p>
+    </div>
+
+    <footer style="text-align: center;">
+        <p>&copy; 2024 Blink Bazaar. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function loadCartItems() {
+            const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+            const cartList = document.getElementById("cartItems");
+            const totalAmount = document.getElementById("totalAmount");
+
+            let total = 0;
+            cartList.innerHTML = "";
+
+            cartItems.forEach((item, index) => {
+                const listItem = document.createElement("li");
+                listItem.classList.add("cart-item");
+
+                listItem.innerHTML = `
+                    <img src="${item.image || './default-product.jpg'}" alt="${item.name}" class="item-image" />
+                    <div class="item-details">
+                        <h3>${item.name}</h3>
+                        <p>₹${item.price}</p>
+                        <p>Quantity: 1</p>
+                        <p>Added on: ${item.dateAdded}</p>
+                    </div>
+                    <button class="remove-item" data-index="${index}">×</button>
+                `;
+
+                cartList.appendChild(listItem);
+                total += item.price;
+            });
+
+            totalAmount.textContent = `Total: ₹${total.toFixed(2)}`;
+            addRemoveItemEvent();
+        }
+
+        function addRemoveItemEvent() {
+            document.querySelectorAll('.remove-item').forEach(button => {
+                button.addEventListener('click', function () {
+                    const index = parseInt(this.getAttribute("data-index"));
+                    removeItemFromCart(index);
+                });
+            });
+        }
+
+        function removeItemFromCart(index) {
+            const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+            cartItems.splice(index, 1);
+            localStorage.setItem("cart", JSON.stringify(cartItems));
+            loadCartItems();  
+        }
+
+        document.getElementById("preferenceSelect").addEventListener("change", function () {
+            const deliveryDate = document.getElementById("deliveryDate");
+            deliveryDate.style.display = this.value === "Yes" ? "block" : "none";
+            deliveryDate.required = this.value === "Yes";
+        });
+
+        document.querySelector('.place-order-btn').addEventListener('click', function () {
+            const form = document.getElementById("checkoutForm");
+            if (form.checkValidity()) {
+                document.querySelector('.order-confirmation').style.display = 'block';
+                localStorage.removeItem("cart");  
+                document.getElementById("cartItems").innerHTML = ""; 
+                document.getElementById("totalAmount").textContent = "Total: ₹0.00";  
+            } else {
+                alert("Please fill out all required fields.");
+            }
+        });
+
+        loadCartItems();
+    </script>
+</body>
+
+</html>

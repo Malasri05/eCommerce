@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modular Sofas And Chairs</title>
+    <link rel="stylesheet" href="catalog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <script>
+        function handleSearch(event) {
+            event.preventDefault();
+            const searchInput = document.getElementById("searchInput");
+            const query = searchInput.value.toLowerCase(); 
+            localStorage.setItem("searchQuery", query);
+            searchInput.value = "";
+            const searchTerms = {
+                "girls": "girlkid.html",
+                "baby girl": "girlkid.html",
+                "dress": "girlkid.html",
+                "boys": "boykid.html",
+                "baby boy": "boykid.html",
+                "men": "men.html",
+                "women": "women.html",
+                "saree": "women.html",
+                "mobile": "mobile.html",
+                "apple": "mobile.html",
+                "vivo": "mobile.html",
+                "realme": "mobile.html",
+                "airpods": "mobile.html",
+                "furniture": "sofa.html",
+                "sofa": "sofa.html",
+                "chair": "sofa.html"
+            };
+
+            for (const term in searchTerms) {
+                if (query.includes(term)) {
+                    window.location.href = searchTerms[term];
+                    return;
+                }
+            }
+
+            alert("No results found for: " + query);
+        }
+
+
+
+    </script>
+    <nav class="fix-navbar">
+        <img src="./image/logoo.png" height="50px" class="logo-img">
+        <h3 class="navbar-title"><em>Blink Bazaar</em></h3>
+        <ul>
+            <li>
+                <form onsubmit="handleSearch(event)">
+                    <i class="fa fa-search icon" style="color: black; font-size: 21px;">
+                        <input type="text" id="searchInput" placeholder="Search for products and brands" class="input">
+                    </i>
+                </form>
+            </li>
+            <li><a href="index.html"> <i class="fa fa-home icon" style="color: black; font-size: 23px;"></i></a></li>
+            <li><a href="cart.html"><i class="fa fa-shopping-cart icon" style="color: black; font-size: 23px;"></i></a>
+            </li>
+        </ul>
+    </nav>
+    <div>
+        <h2>Modular Sofas</h2><br>
+        <div class="cover column">
+            <div class="box">
+                <img class="img" src="./image/Block Nomad Sofa.jpeg" alt="Block Nomad Sofa">
+                <h3>Block Nomad Sofa</h3>
+                <p>₹1,69,900</p>
+                <button class="add-to-cart" data-name="Block Nomad Sofa" data-price="169900" data-img="./image/Block Nomad Sofa.jpeg">Add to Cart</button>
+            </div>
+
+            <div class="box">
+                <img class="img" src="./image/Field 3-Piece Sofa1.jpeg" alt="Field 3-Piece Sofa">
+                <h3>Field 3-Piece Sofa</h3>
+                <p>₹1,09,900 - ₹1,24,900</p>
+                <button class="add-to-cart" data-name="Field 3-Piece Sofa" data-price="124900" data-img="./image/Field 3-Piece Sofa1.jpeg">Add to Cart</button>
+            </div>
+            <div class="box">
+                <img class="img" src="./image/Union 3-Seat Sofa.jpeg" alt="Union 3-Seat Sofa">
+                <h3>Union 3-Seat Sofa</h3>
+                <p>₹2,49,900</p>
+                <button class="add-to-cart" data-name="Union 3-Seat Sofa" data-price="249900" data-img="./image/Union 3-Seat Sofa.jpeg">Add to Cart</button>
+            </div>
+
+            <div class="box">
+                <img class="img" src="./image/Field Leather 4-Piece Sectional Lounger.jpeg" alt="Field Leather 4-Piece Sectional Lounger">
+                <h3>Field Leather 4-Piece Sectional Lounger</h3>
+                <p>₹2,99,900</p>
+                <button class="add-to-cart" data-name="Field Leather 4-Piece Sectional Lounger" data-price="299900" data-img="./image/Field Leather 4-Piece Sectional Lounger.jpeg">Add to Cart</button>
+            </div>
+        </div>
+        <div>
+            <h2>Accent Chairs</h2><br>
+            <div class="cover column">
+                <div class="box">
+                    <img class="img" src="./image/Gimelt Chair With Ottoman.jpeg" alt="Gimelt Chair With Ottoman">
+                    <h3>Gimelt Chair With Ottoman</h3>
+                    <p>₹69,900 - ₹89,900</p>
+                    <button class="add-to-cart" data-name="Gimelt Chair With Ottoman" data-price="89900" data-img="./image/Gimelt Chair With Ottoman.jpeg">Add to Cart</button>
+                </div>
+                <div class="box">
+                    <img class="img" src="./image/Vesper Leather & Wood Lounge Chair.jpeg" alt="Vesper Leather & Wood Lounge Chair">
+                    <h3>Vesper Leather & Wood Lounge Chair</h3>
+                    <p>₹99,900 - ₹1,99,900</p>
+                    <button class="add-to-cart" data-name="Vesper Leather & Wood Lounge Chair" data-price="199900" data-img="./image/Vesper Leather & Wood Lounge Chair.jpeg">Add to Cart</button>
+                </div>
+                <div class="box">
+                    <img class="img" src="./image/Lodge Chair.jpeg" alt="Lodge Chair">
+                    <h3>Lodge Chair</h3>
+                    <p>₹74,900 - ₹94,900</p>
+                    <button class="add-to-cart" data-name="Lodge Chair" data-price="94900" data-img="./image/Lodge Chair.jpeg">Add to Cart</button>
+                </div>
+                <div class="box">
+                    <img class="img" src="./image/Pica Chair.jpeg" alt="Pica Chair">
+                    <h3>Pica Chair</h3>
+                    <p>₹64,900 - ₹1,49,900</p>
+                    <button class="add-to-cart" data-name="Pica Chair" data-price="149900" data-img="./image/Pica Chair.jpeg">Add to Cart</button>
+                </div>
+                <div class="box">
+                    <img class="img" src="./image/Union Armchair.jpeg" alt="Union Armchair">
+                    <h3>Union Armchair</h3>
+                    <p>₹1,14,900 - ₹1,94,900</p>
+                    <button class="add-to-cart" data-name="Union Armchair" data-price="194900" data-img="./image/Union Armchair.jpeg">Add to Cart</button>
+                </div>
+                <div class="box">
+                    <img class="img" src="./image/Range Set.jpeg" alt="Range Set">
+                    <h3>Range Set</h3>
+                    <p>₹39,900 - ₹59,900</p>
+                    <button class="add-to-cart" data-name="Range Set" data-price="59900" data-img="./image/Range Set.jpeg">Add to Cart</button>
+                </div>
+                <div class="box">
+                    <img class="img" src="./image/Mambo Armchair.jpeg" alt="Mambo Armchair">
+                    <h3>Mambo Armchair</h3>
+                    <p>₹1,19,900 - ₹1,59,900</p>
+                    <button class="add-to-cart" data-name="Mambo Armchair" data-price="159900" data-img="./image/Mambo Armchair.jpeg">Add to Cart</button>
+                </div>
+                <div class="box">
+                    <img class="img" src="./image/Field Armchair.jpeg" alt="Field Armchair">
+                    <h3>Field Armchair</h3>
+                    <p>₹59,900 - ₹89,900</p>
+                    <button class="add-to-cart" data-name="Field Armchair" data-price="89900" data-img="./image/Field Armchair.jpeg">Add to Cart</button>
+                </div>
+            </div>
+            <div>
+                <h2>Ottomans</h2>
+                <div class="cover column">
+                    <div class="box">
+                        <img class="img" src="./image/Nomad Ottoman.jpeg" alt="Nomad Ottoman">
+                        <h3>Nomad Ottoman</h3>
+                        <p>₹34,900 - ₹74,900</p>
+                        <button class="add-to-cart" data-name="Nomad Ottoman" data-price="74900" data-img="./image/Nomad Ottoman.jpeg">Add to Cart</button>
+                    </div>
+                    <div class="box">
+                        <img class="img" src="./image/Gimelt Ottoman.jpeg" alt="Gimelt Ottoman">
+                        <h3>Gimelt Ottoman</h3>
+                        <p>₹39,900 - ₹49,900</p>
+                        <button class="add-to-cart" data-name="Gimelt Ottoman" data-price="49900" data-img="./image/Gimelt Ottoman.jpeg">Add to Cart</button>
+                    </div>
+                    <div class="box">
+                        <img class="img" src="./image/Field Ottoman.jpeg" alt="Field Ottoman">
+                        <h3>Field Ottoman</h3>
+                        <p>₹49,900 - ₹59,900</p>
+                        <button class="add-to-cart" data-name="Field Ottoman" data-price="59900" data-img="./image/Field Ottoman.jpeg">Add to Cart</button>
+                    </div>
+                    <div class="box">
+                        <img class="img" src="./image/Mambo Ottoman.jpeg" alt="Mambo Ottoman">
+                        <h3>Mambo Ottoman</h3>
+                        <p>₹59,900 - ₹69,900</p>
+                        <button class="add-to-cart" data-name="Mambo Ottoman" data-price="69900" data-img="./image/Mambo Ottoman.jpeg">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+</body>
+<script>
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', () => {
+            const item = {
+                name: button.getAttribute('data-name'),
+                price: parseFloat(button.getAttribute('data-price')),
+                image: button.getAttribute('data-image'),
+                dateAdded: new Date().toLocaleString()
+            };
+
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart.push(item);
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            alert(`${item.name} has been added to your cart.`);
+        });
+    });
+</script>
+</html>

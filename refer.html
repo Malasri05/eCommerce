@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refer a Friend | Blink Bazaar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #000;
+            padding: 10px;
+            color: white;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            display: inline;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        .container {
+            height: fit-content;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 50px;
+            background-color: white;
+            margin: 50px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-section {
+            width: 60%;
+            padding-right: 50px;
+        }
+
+        .text-section h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .text-section p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .form-section {
+            width: 35%;
+            background-color: #f9f9f9;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-section h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .form-section input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-section input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .form-section button {
+            background-color: #ffc107;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <nav class="fix-navbar">
+        <button class="openbtn" onclick="openNav()">☰</button>
+        <h3 class="navbar-title"><em>Blink Bazaar</em></h3>
+        <ul>
+            <li>
+                <form>
+                    <i class="fa fa-search icon" style="color: black; font-size: 21px;">
+                        <input type="textarea" placeholder="Search for products and brands" class="input">
+                    </i>
+                </form>
+            </li>
+            <li><a href="index.html"> <i class="fa fa-home icon" style="color: black; font-size: 23px;"></i></a></li>
+            <li><a href="login.html"><i class="fa fa-user icon" style="color: black; font-size: 23px;"> </i></a></li>
+            <li><i class="fa fa-shopping-cart icon" style="color: black; font-size: 23px;"> </i></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="text-section">
+            <img src="./image/friend.png" alt="">
+            <h1>Get rewarded for sharing your style</h1>
+            <p>They shower you with compliments whenever they come over, and now you can turn those compliments into cash.
+                Earn a $50 Amazon gift card for each person who makes their first Blink Bazaar purchase over $300 with your
+                personal link — and they’ll get $75 off their order, too!</p>
+        </div>
+
+        <div class="form-section">
+            <h2>Enter your info to get started</h2>
+            <form>
+                <input type="text" placeholder="What's your name?" required>
+                <input type="email" placeholder="What's your email?" required>
+                <label>
+                    <input type="checkbox"> Sign up for emails to hear about product launches, secret sales, and more from your
+                    friends at Blink Bazaar.
+                </label>
+                <button type="button" onclick="shareContent()">START SHARING</button>
+
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Shopping Services</h3>
+                <ul>
+                    <li>Schedule Consultation</li>
+                    <li>Showrooms</li>
+                    <li>Trade Program</li>
+                    <li>Outlet</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>About</h3>
+                <ul>
+                    <li>Our Story</li>
+                    <li>Reviews</li>
+                    <li>Careers</li>
+                    <li>Financing</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li>Patents</li>
+                    <li>Look Up Order Status</li>
+                    <li>Blog</li>
+                    <li>Assembly Instructions</li>
+                    <li>Returns</li>
+                    <li>Shipping & Delivery</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Customer Experience</h3>
+                <ul>
+                    <li>Email: support@blinkbazaar.com</li>
+                    <li>FAQ</li>
+                    <li>Refer a Friend</li>
+                    <li>Hours:</li>
+                    <li>Monday to Friday — 10a to 6p EST</li>
+                    <li>Saturday to Sunday — 10a to 2p EST</li>
+                    <li>15 W 27th Street, 10th Floor New York, NY, 10001</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Blink Bazaar -</p>
+            <p>
+                <a href="#">Terms</a> -
+                <a href="#">Accessibility</a> -
+                <a href="#">Sitemap</a> -
+                <a href="#">Privacy</a> -
+                <a href="#">Do not sell my personal information</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+    
+
+    <script>
+        function shareContent() {
+            const shareData = {
+                title: 'Blink Bazaar',
+                text: 'Check out Blink Bazaar and get $75 off your first purchase over $300 with my link!',
+                url: 'https://www.blinkbazaar.com' 
+            };
+    
+            if (navigator.share) {
+                navigator.share(shareData)
+                    .then(() => console.log('Successful share'))
+                    .catch((error) => console.log('Error sharing:', error));
+            } else {
+                alert("Sharing is not supported on this browser. Please copy and share this link: " + shareData.url);
+            }
+        }
+    </script>
+    
+</body>
+
+</html>

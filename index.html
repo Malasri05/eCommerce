@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blink Bazaar</title>
+    <link rel="icon" type="image/x-icon" href="./image/image-removebg-preview.png">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div style="color: white;" class="nav-con">
+            <img src="./image/logoo.png" height="50px" class="logo-img">
+            <ul>
+                <li><a href="deals.html">Top Deals</a> </li>
+                <li> <a href="refer.html">Refer a Friend</a></li>
+                <li> <a href="#contact"> About</a></li>
+                <li> <a href="signup.html">Create Account</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="shop.html" onclick="navigateTo('shop.html')"></a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="index.html" onclick="navigateTo('index.html')">Home</a>
+        <a href="deals.html" onclick="navigateTo('deals.html')">Top Deals</a>
+        <a href="#categories" onclick="navigateTo('#categories')">Categories</a>
+        <a href="#contact" onclick="navigateTo('#contact')">Contact</a>
+    </div>
+
+    <nav class="fix-navbar">
+        <button class="openbtn" onclick="openNav()">☰</button>
+        <h3 class="navbar-title"><em>Blink Bazaar</em></h3>
+        <ul>
+            <li>
+                <form onsubmit="handleSearch(event)">
+                    <i class="fa fa-search icon" style="color: black; font-size: 21px;">
+                        <input type="text" id="searchInput" placeholder="Search for products and brands" class="input">
+                    </i>
+                </form>
+            </li>
+
+            <li><a href="login.html"><i class="fa fa-user icon" style="color: black; font-size: 23px;"> </i></a></li>
+            <li><a href="cart.html"><i class="fa fa-shopping-cart icon" style="color: black; font-size: 23px;"></i></a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="box">
+        <div class="container">
+            <h1>Blink Bazaar</h1>
+            <p style="font-family: mo; font-size: 20px;">
+                Sometimes, you just need to sit on it. <br> Come get up
+                close and <br> personal with our products <br> try before
+                you buy.
+            <h2 id="categories">Clever Design For every Fashion</h2>
+            </p>
+        </div>
+    </div>
+    <div class="pro-con">
+
+        <div class="pro-one">
+            <a href="girlkid.html"><button class='btn'>Shop Now</button></a>
+        </div>
+        <div class="pro-two">
+            <a href="boykid.html"><button class='btn'>Shop Now</button></a>
+        </div>
+        <div class="pro-three">
+            <a href="men.html"><button class='btn'>Shop Now</button></a>
+        </div>
+        <div class="pro-four">
+            <a href="women.html"><button class='btn'>Shop Now</button></a>
+        </div>
+        <div class="pro-five">
+            <a href="mobile.html"><button class='btn'>Shop Now</button></a>
+        </div>
+        <div class="pro-six">
+            <a href="sofa.html"><button class='btn'>Shop Now</button></a>
+        </div>
+    </div>
+    <div id="contact"></div>
+    <h3 style="text-align: center;">Contact us for More Details</h3>
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Shopping Services</h3>
+                <ul>
+                    <li>Schedule Consultation</li>
+                    <li>Showrooms</li>
+                    <li>Trade Program</li>
+                    <li>Outlet</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>About</h3>
+                <ul>
+                    <li>Our Story</li>
+                    <li>Reviews</li>
+                    <li>Careers</li>
+                    <li>Financing</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li>Patents</li>
+                    <li>Look Up Order Status</li>
+                    <li>Blog</li>
+                    <li>Assembly Instructions</li>
+                    <li>Returns</li>
+                    <li>Shipping & Delivery</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Customer Experience</h3>
+                <ul>
+                    <li>Email: support@blinkbazaar.com</li>
+                    <li>FAQ</li>
+                    <li>Refer a Friend</li>
+                    <li>Hours:</li>
+                    <li>Monday to Friday — 10a to 6p EST</li>
+                    <li>Saturday to Sunday — 10a to 2p EST</li>
+                    <li>15 W 27th Street, 10th Floor New York, NY, 10001</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Blink Bazaar -</p>
+            <p>
+                <a href="#">Terms</a> -
+                <a href="#">Accessibility</a> -
+                <a href="#">Sitemap</a> -
+                <a href="#">Privacy</a> -
+                <a href="#">Do not sell my personal information</a>
+            </p>
+        </div>
+    </div>
+
+
+    <script>
+        function handleSearch(event) {
+            event.preventDefault(); // Prevents form from refreshing the page
+            const searchInput = document.getElementById("searchInput");
+            const query = searchInput.value.toLowerCase(); // Get the search query and make it lowercase
+
+            // Store the search query in localStorage
+            localStorage.setItem("searchQuery", query);
+            searchInput.value = "";
+            const searchTerms = {
+                "girls": "girlkid.html",
+                "baby girl": "girlkid.html",
+                "dress": "girlkid.html",
+                "boys": "boykid.html",
+                "baby boy": "boykid.html",
+                "men": "men.html",
+                "women": "women.html",
+                "saree": "women.html",
+                "mobile": "mobile.html",
+                "apple": "mobile.html",
+                "vivo": "mobile.html",
+                "realme": "mobile.html",
+                "airpods": "mobile.html",
+                "furniture": "sofa.html",
+                "sofa": "sofa.html",
+                "chair": "sofa.html"
+            };
+
+            for (const term in searchTerms) {
+                if (query.includes(term)) {
+                    window.location.href = searchTerms[term];
+                    return;
+                }
+            }
+
+            alert("No results found for: " + query);
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

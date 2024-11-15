@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids-Boy</title>
+    <link rel="stylesheet" href="catalog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <script>
+        function handleSearch(event) {
+            event.preventDefault();
+            const searchInput = document.getElementById("searchInput");
+            const query = searchInput.value.toLowerCase();
+            localStorage.setItem("searchQuery", query);
+            searchInput.value = "";
+            const searchTerms = {
+                "girls": "girlkid.html",
+                "baby girl": "girlkid.html",
+                "dress": "girlkid.html",
+                "boys": "boykid.html",
+                "baby boy": "boykid.html",
+                "men": "men.html",
+                "women": "women.html",
+                "saree": "women.html",
+                "mobile": "mobile.html",
+                "apple": "mobile.html",
+                "vivo": "mobile.html",
+                "realme": "mobile.html",
+                "airpods": "mobile.html",
+                "furniture": "sofa.html",
+                "sofa": "sofa.html",
+                "chair": "sofa.html"
+            };
+
+            for (const term in searchTerms) {
+                if (query.includes(term)) {
+                    window.location.href = searchTerms[term];
+                    return;
+                }
+            }
+
+            alert("No results found for: " + query);
+        }
+
+
+
+    </script>
+    <nav class="fix-navbar">
+        <img src="./image/logoo.png" height="50px" class="logo-img">
+        <h3 class="navbar-title"><em>Blink Bazaar</em></h3>
+        <ul>
+            <li>
+                <form onsubmit="handleSearch(event)">
+                    <i class="fa fa-search icon" style="color: black; font-size: 21px;">
+                        <input type="text" id="searchInput" placeholder="Search for products and brands" class="input">
+                    </i>
+                </form>
+            </li>
+            <li><a href="index.html"> <i class="fa fa-home icon" style="color: black; font-size: 23px;"></i></a></li>
+            <li><a href="cart.html"><i class="fa fa-shopping-cart icon" style="color: black; font-size: 23px;"></i></a>
+            </li>
+        </ul>
+    </nav>
+    <div>
+        <h2>Boys collection</h2>
+        <div class="cover column">
+            <div class="box">
+                <img class="img" src="./image/Baby Boys Party(Festive) Shirt Shorts  (Blue).webp"
+                    alt="Baby Boys Party(Festive) Shirt Shorts (Blue)">
+                <h3>Baby Boys Party(Festive) Shirt Shorts (Blue)</h3>
+                <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                    <p>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                    </p>
+                    <p>₹345</p>
+                </div>
+                <button class="add-to-cart" data-name="Baby Boys Party(Festive) Shirt Shorts (Blue)" data-price="345"
+                    data-image="./image/Baby Boys Party(Festive) Shirt Shorts  (Blue).webp">
+                    Add to Cart
+                </button>
+            </div>
+            <div class="box">
+                <img class="img" src="./image/Baby Boys Casual Sweatshirt Pant  (Multicolor).webp"
+                    alt="Baby Boys Casual Sweatshirt Pant (Multicolor)">
+                <h3>Baby Boys Casual Sweatshirt Pant (Multicolor)</h3>
+                <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                    <p>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                    </p>
+                    <p>₹259</p>
+                </div>
+                <button class="add-to-cart" data-name="Baby Boys Casual Sweatshirt Pant (Multicolor)" data-price="259"
+                    data-image="./image/Baby Boys Casual Sweatshirt Pant  (Multicolor).webp">
+                    Add to Cart
+                </button>
+            </div>
+            <div class="box">
+                <img class="img" src="./image/Baby Boys Casual Kurta Dhoti Pant  (White).webp"
+                    alt="Baby Boys Casual Kurta Dhoti Pant (White)">
+                <h3>Baby Boys Casual Kurta Dhoti Pant (White)</h3>
+                <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                    <p>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                    </p>
+                    <p>₹159</p>
+                </div>
+                <button class="add-to-cart" data-name="Baby Boys Casual Kurta Dhoti Pant (White)" data-price="159"
+                    data-image="./image/Baby Boys Casual Kurta Dhoti Pant  (White).webp">
+                    Add to Cart
+                </button>
+            </div>
+            <div class="box">
+                <img class="img" src="./image/Baby Boys  Casual T-shirt Track Pants  (Light Blue).webp"
+                    alt="Baby Boys Casual T-shirt Track Pants (Light Blue)">
+                <h3>Baby Boys Casual T-shirt Track Pants (Light Blue)</h3>
+                <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                    <p>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                    </p>
+                    <p>₹209</p>
+                </div>
+                <button class="add-to-cart" data-name="Baby Boys Casual T-shirt Track Pants (Light Blue)"
+                    data-price="209" data-image="./image/Baby Boys  Casual T-shirt Track Pants  (Light Blue).webp">
+                    Add to Cart
+                </button>
+            </div>
+            <div class="box">
+                <img class="img" src="./image/Baby Boys Party(Festive) Shirt Pant, Bow Tie, Jacket  (Blue).webp"
+                    alt="Baby Boys Party(Festive) Shirt Pant, Bow Tie, Jacket (Blue)">
+                <h3>Baby Boys Party(Festive) Shirt Pant, Bow Tie, Jacket (Blue)</h3>
+                <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                    <p>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                    </p>
+                    <p>₹459</p>
+                </div>
+                <button class="add-to-cart" data-name="Baby Boys Party(Festive) Shirt Pant, Bow Tie, Jacket (Blue)"
+                    data-price="459"
+                    data-image="./image/Baby Boys Party(Festive) Shirt Pant, Bow Tie, Jacket  (Blue).webp">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="box">
+                <img class="img" src="./image/Baby Boys  Casual T-shirt Shorts  (Blue).webp"
+                    alt="Baby Boys Casual T-shirt Shorts (Blue)">
+                <h3>Baby Boys Casual T-shirt Shorts (Blue)</h3>
+                <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                    <p>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                    </p>
+                    <p>₹499</p>
+                </div>
+                <button class="add-to-cart" data-name="Baby Boys Casual T-shirt Shorts (Blue)" data-price="499"
+                    data-image="./image/Baby Boys  Casual T-shirt Shorts  (Blue).webp">
+                    Add to Cart
+                </button>
+            </div>
+            <div class="box">
+                <img class="img" src="./image/Baby Boys Party(Festive) Waistcoat Pant  (Maroon).webp"
+                    alt="Baby Boys Party(Festive) Waistcoat Pant (Maroon)">
+                <h3>Baby Boys Party(Festive) Waistcoat Pant (Maroon)</h3>
+                <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                    <p>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                    </p>
+                    <p>₹489</p>
+                </div>
+                <button class="add-to-cart" data-name="Baby Boys Party(Festive) Waistcoat Pant (Maroon)"
+                    data-price="489" data-image="./image/Baby Boys Party(Festive) Waistcoat Pant  (Maroon).webp">
+                    Add to Cart
+                </button>
+            </div>
+            <div class="box">
+                <img class="img"
+                    src="./image/Baby Boys  Party(Festive) Waistcoat Pant, Bow Tie, Waistcoat  (Multicolor).webp"
+                    alt="Baby Boys Party(Festive) Waistcoat Pant, Bow Tie, Waistcoat (Multicolor)">
+                <h3>Baby Boys Party(Festive) Waistcoat Pant, Bow Tie, Waistcoat (Multicolor)</h3>
+                <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                    <p>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                    </p>
+                    <p>₹299</p>
+                </div>
+                <button class="add-to-cart"
+                    data-name="Baby Boys Party(Festive) Waistcoat Pant, Bow Tie, Waistcoat (Multicolor)"
+                    data-price="299"
+                    data-image="./image/Baby Boys  Party(Festive) Waistcoat Pant, Bow Tie, Waistcoat  (Multicolor).webp">
+                    Add to Cart
+                </button>
+            </div>
+
+        </div>
+        <script>
+            document.querySelectorAll('.add-to-cart').forEach(button => {
+                button.addEventListener('click', () => {
+                    const item = {
+                        name: button.getAttribute('data-name'),
+                        price: parseFloat(button.getAttribute('data-price')),
+                        image: button.getAttribute('data-image'),
+                        dateAdded: new Date().toLocaleString()
+                    };
+
+                    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+                    cart.push(item);
+                    localStorage.setItem("cart", JSON.stringify(cart));
+
+                    alert(`${item.name} has been added to your cart.`);
+                });
+            });
+        </script>
+</body>
+
+</html>

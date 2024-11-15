@@ -1,0 +1,269 @@
+.navbar {
+    margin: 0;
+    padding: 0;
+    height: 65px;
+    background: black;
+    display: flex;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-con {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
+
+.input {
+    width: 280px;
+    padding: 2px;
+    font-size: 15px;
+    height: 23px;
+    text-align: center;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+
+    cursor: pointer;
+    padding: 10px;
+    list-style: none;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: white;
+}
+
+.fix-navbar {
+    background-color: #f9f9f9;
+    height: 60px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    position: sticky;
+    top: 0;
+    margin: 0;
+    z-index: 1000;
+}
+
+.navbar-title {
+    padding-left: 450px;
+}
+
+.box {
+    padding: 50px;
+}
+
+.container {
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+
+.pro-con {
+    padding: 45px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 40px;
+}
+
+.pro {
+    border: 1px solid #ddd;
+}
+
+.pro-one {
+    background-image: url(./image/girlKid.png);
+
+}
+
+.pro-two {
+    background-image: url(./image/boyKid.jpg);
+
+}
+
+.pro-three {
+    background-image: url(./image/men.png);
+
+}
+
+.pro-four {
+    background-image: url(./image/women.png);
+
+}
+
+.pro-five {
+    background-image: url(./image/gadgets.png);
+
+}
+
+.pro-six {
+    background-image: url(./image/furniture.png);
+
+}
+
+.pro-one,
+.pro-two,
+.pro-three,
+.pro-four,
+.pro-five,
+.pro-six {
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    width: 100%;
+    height: 500px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 20px;
+}
+
+.btn {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e7ce51;
+}
+
+.sidebar {
+    height: calc(100% - 70px);
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 60px;
+    margin: 10px;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 30px;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    color: #111;
+    padding: 10px 15px;
+    border: none;
+}
+
+.fix-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #fff;
+}
+
+.footer {
+    background-color: #111;
+    color: #ddd;
+    padding: 40px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer-section ul {
+    display: inline;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer-section ul li:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+}
+
+.footer-bottom a {
+    color: #ddd;
+    text-decoration: none;
+    margin: 0 5px;
+    font-size: 14px;
+}
+
+.footer-bottom a:hover {
+    color: #fff;
+}

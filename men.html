@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men</title>
+    <link rel="stylesheet" href="catalog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <script>
+        function handleSearch(event) {
+            event.preventDefault();
+            const searchInput = document.getElementById("searchInput");
+            const query = searchInput.value.toLowerCase();
+
+            localStorage.setItem("searchQuery", query);
+            searchInput.value = "";
+            const searchTerms = {
+                "girls": "girlkid.html",
+                "baby girl": "girlkid.html",
+                "dress": "girlkid.html",
+                "boys": "boykid.html",
+                "baby boy": "boykid.html",
+                "men": "men.html",
+                "women": "women.html",
+                "saree": "women.html",
+                "mobile": "mobile.html",
+                "apple": "mobile.html",
+                "vivo": "mobile.html",
+                "realme": "mobile.html",
+                "airpods": "mobile.html",
+                "furniture": "sofa.html",
+                "sofa": "sofa.html",
+                "chair": "sofa.html"
+            };
+
+            for (const term in searchTerms) {
+                if (query.includes(term)) {
+                    window.location.href = searchTerms[term];
+                    return;
+                }
+            }
+
+            alert("No results found for: " + query);
+        }
+
+
+
+    </script>
+    <nav class="fix-navbar">
+        <img src="./image/logoo.png" height="50px" class="logo-img">
+        <h3 class="navbar-title"><em>Blink Bazaar</em></h3>
+        <ul>
+            <li>
+                <form onsubmit="handleSearch(event)">
+                    <i class="fa fa-search icon" style="color: black; font-size: 21px;">
+                        <input type="text" id="searchInput" placeholder="Search for products and brands" class="input">
+                    </i>
+                </form>
+            </li>
+            <li><a href="index.html"> <i class="fa fa-home icon" style="color: black; font-size: 23px;"></i></a></li>
+            <li><a href="cart.html"><i class="fa fa-shopping-cart icon" style="color: black; font-size: 23px;"></i></a>
+            </li>
+        </ul>
+    </nav>
+    <div>
+        <h2>Shirts</h2>
+        <div class="cover column">
+            <div class="box">
+                <img class="img" src="./image/Men Printed Polo Neck Polyester Grey T-Shirt.webp"
+                    alt="Men Printed Polo Neck Polyester Grey T-Shirt">
+                <h3>Men Printed Polo Neck Polyester Grey T-Shirt</h3>
+                <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                    <p>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star-half-alt" style="color: goldenrod;"></i>
+                    </p>
+                    <p>₹279</p>
+                </div>
+                <button class="add-to-cart" data-name="Men Printed Polo Neck Polyester Grey T-Shirt" data-price="279"
+                    data-image="./image/Men Printed Polo Neck Polyester Grey T-Shirt.webp">
+                    Add to Cart
+                </button>
+            </div>
+            <div class="box">
+                <img class="img" src="./image/Men Solid Hooded Neck Cotton Blend Red T-Shirt.webp"
+                    alt="Men Solid Hooded Neck Cotton Blend Red T-Shirt">
+                <h3>Men Solid Hooded Neck Cotton Blend Red T-Shirt</h3>
+                <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                    <p>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                    </p>
+                    <p>₹298</p>
+                </div>
+                <button class="add-to-cart" data-name="Men Solid Hooded Neck Cotton Blend Red T-Shirt" data-price="298"
+                    data-image="./image/Men Solid Hooded Neck Cotton Blend Red T-Shirt.webp">
+                    Add to Cart
+                </button>
+            </div>
+            <div class="box">
+                <img class="img" src="./image/Men Colorblock Round Neck Pure Cotton Pink T-Shirt.webp"
+                    alt="Men Colorblock Round Neck Pure Cotton Pink T-Shirt">
+                <h3>Men Colorblock Round Neck Pure Cotton Pink T-Shirt</h3>
+                <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                    <p>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star-half-alt" style="color: goldenrod;"></i>
+                    </p>
+                    <p>₹297</p>
+                </div>
+                <button class="add-to-cart" data-name="Men Colorblock Round Neck Pure Cotton Pink T-Shirt"
+                    data-price="297" data-image="./image/Men Colorblock Round Neck Pure Cotton Pink T-Shirt.webp">
+                    Add to Cart
+                </button>
+            </div>
+            <div class="box">
+                <img class="img" src="./image/Men Printed Hooded Neck Cotton Blend Black, Light Green T-Shirt.webp"
+                    alt="Men Printed Hooded Neck Cotton Blend Black, Light Green T-Shirt">
+                <h3>Men Printed Hooded Neck Cotton Blend Black, Light Green T-Shirt</h3>
+                <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                    <p>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                    </p>
+                    <p>₹299</p>
+                </div>
+                <button class="add-to-cart" data-name="Men Printed Hooded Neck Cotton Blend Black, Light Green T-Shirt"
+                    data-price="299"
+                    data-image="./image/Men Printed Hooded Neck Cotton Blend Black, Light Green T-Shirt.webp">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="box">
+                <img class="img" src="./image/Men Slim Fit Solid Spread Collar Formal Shirt.webp"
+                    alt="Men Slim Fit Solid Spread Collar Formal Shirt">
+                <h3>Men Slim Fit Solid Spread Collar Formal Shirt</h3>
+                <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                    <p>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star-half-alt" style="color: goldenrod;"></i>
+                    </p>
+                    <p>₹379</p>
+                </div>
+                <button class="add-to-cart" data-name="Men Slim Fit Solid Spread Collar Formal Shirt" data-price="379"
+                    data-image="./image/Men Slim Fit Solid Spread Collar Formal Shirt.webp">
+                    Add to Cart
+                </button>
+            </div>
+            <div class="box">
+                <img class="img" src="./image/Men Full Sleeve Solid Hooded Sweatshirt.webp"
+                    alt="Men Full Sleeve Solid Hooded Sweatshirt">
+                <h3>Men Full Sleeve Solid Hooded Sweatshirt</h3>
+                <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                    <p>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                    </p>
+                    <p>₹349</p>
+                </div>
+                <button class="add-to-cart" data-name="Men Full Sleeve Solid Hooded Sweatshirt" data-price="349"
+                    data-image="./image/Men Full Sleeve Solid Hooded Sweatshirt.webp">
+                    Add to Cart
+                </button>
+            </div>
+            <div class="box">
+                <img class="img" src="./image/Men Solid Cotton Blend Straight Kurta  (White).webp"
+                    alt="Men Solid Cotton Blend Straight Kurta (White)">
+                <h3>Men Solid Cotton Blend Straight Kurta (White)</h3>
+                <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                    <p>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                    </p>
+                    <p>₹399</p>
+                </div>
+                <button class="add-to-cart" data-name="Men Solid Cotton Blend Straight Kurta (White)" data-price="399"
+                    data-image="./image/Men Solid Cotton Blend Straight Kurta  (White).webp">
+                    Add to Cart
+                </button>
+            </div>
+            <div class="box">
+                <img class="img" src="./image/Men Solid Cotton Blend Straight Kurta  (Light Green).webp"
+                    alt="Men Solid Cotton Blend Straight Kurta (Light Green)">
+                <h3>Men Solid Cotton Blend Straight Kurta (Light Green)</h3>
+                <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                    <p>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star-half-alt" style="color: goldenrod;"></i>
+                    </p>
+                    <p>₹299</p>
+                </div>
+                <button class="add-to-cart" data-name="Men Solid Cotton Blend Straight Kurta (Light Green)"
+                    data-price="299" data-image="./image/Men Solid Cotton Blend Straight Kurta  (Light Green).webp">
+                    Add to Cart
+                </button>
+            </div>
+            <div class="box">
+                <img class="img" src="./image/Men Printed Cotton Blend Straight Kurta  (Purple).webp"
+                    alt="Men Printed Cotton Blend Straight Kurta (Purple)">
+                <h3>Men Printed Cotton Blend Straight Kurta (Purple)</h3>
+                <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                    <p>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                    </p>
+                    <p>₹299</p>
+                </div>
+                <button class="add-to-cart" data-name="Men Printed Cotton Blend Straight Kurta (Purple)"
+                    data-price="299" data-image="./image/Men Printed Cotton Blend Straight Kurta  (Purple).webp">
+                    Add to Cart
+                </button>
+            </div>
+            <div class="box">
+                <img class="img" src="./image/Men Solid Bomber Jacket.webp" alt="Men Solid Bomber Jacket">
+                <h3>Men Solid Bomber Jacket</h3>
+                <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                    <p>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star-half-alt" style="color: goldenrod;"></i>
+                    </p>
+                    <p>₹499</p>
+                </div>
+                <button class="add-to-cart" data-name="Men Solid Bomber Jacket" data-price="499"
+                    data-image="./image/Men Solid Bomber Jacket.webp">
+                    Add to Cart
+                </button>
+            </div>
+            <div class="box">
+                <img class="img" src="./image/Men Colorblock Casual Jacket.webp" alt="Men Colorblock Casual Jacket">
+                <h3>Men Colorblock Casual Jacket</h3>
+                <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                    <p>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                    </p>
+                    <p>₹749</p>
+                </div>
+                <button class="add-to-cart" data-name="Men Colorblock Casual Jacket" data-price="749"
+                    data-image="./image/Men Colorblock Casual Jacket.webp">
+                    Add to Cart
+                </button>
+            </div>
+            <div class="box">
+                <img class="img" src="./image/Men Solid Biker Riding Jacket.webp" alt="Men Solid Biker/Riding Jacket">
+                <h3>Men Solid Biker/Riding Jacket</h3>
+                <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                    <p>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                        <i class="fa fa-star" style="color: goldenrod;"></i>
+                    </p>
+                    <p>₹2,299</p>
+                </div>
+                <button class="add-to-cart" data-name="Men Solid Biker Riding Jacket" data-price="2299"
+                    data-image="./image/Men Solid Biker Riding Jacket.webp">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div>
+                <h2>Bottom Wear</h2>
+                <div class="cover column">
+                    <div class="box">
+                        <img class="img" src="./image/Men Slim Mid Rise Light Blue Jeans.webp"
+                            alt="Men Slim Mid Rise Light Blue Jeans">
+                        <h3>Men Slim Mid Rise Light Blue Jeans</h3>
+                        <div
+                            style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                            <p>
+                                <i class="fa fa-star" style="color: goldenrod;"></i>
+                                <i class="fa fa-star" style="color: goldenrod;"></i>
+                                <i class="fa fa-star" style="color: goldenrod;"></i>
+                                <i class="fa fa-star-half-alt" style="color: goldenrod;"></i>
+                            </p>
+                            <p>₹657</p>
+                        </div>
+                        <button class="add-to-cart" data-name="Men Slim Mid Rise Light Blue Jeans" data-price="657"
+                            data-image="./image/Men Slim Mid Rise Light Blue Jeans.webp">
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="box">
+                        <img class="img" src="./image/Men Regular Mid Rise White Jeans.webp"
+                            alt="Men Regular Mid Rise White Jeans">
+                        <h3>Men Regular Mid Rise White Jeans</h3>
+                        <div
+                            style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                            <p>
+                                <i class="fa fa-star" style="color: goldenrod;"></i>
+                                <i class="fa fa-star" style="color: goldenrod;"></i>
+                                <i class="fa fa-star-half-alt" style="color: goldenrod;"></i>
+                            </p>
+                            <p>₹399</p>
+                        </div>
+                        <button class="add-to-cart" data-name="Men Regular Mid Rise White Jeans" data-price="399"
+                            data-image="./image/Men Regular Mid Rise White Jeans.webp">
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="box">
+                        <img class="img" src="./image/Men Loose Fit Mid Rise Black Jeans.webp"
+                            alt="Men Loose Fit Mid Rise Black Jeans">
+                        <h3>Men Loose Fit Mid Rise Black Jeans</h3>
+                        <div
+                            style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px;">
+                            <p>
+                                <i class="fa fa-star" style="color: goldenrod;"></i>
+                                <i class="fa fa-star" style="color: goldenrod;"></i>
+                                <i class="fa fa-star" style="color: goldenrod;"></i>
+                            </p>
+                            <p>₹699</p>
+                        </div>
+                        <button class="add-to-cart" data-name="Men Loose Fit Mid Rise Black Jeans" data-price="699"
+                            data-image="./image/Men Loose Fit Mid Rise Black Jeans.webp">
+                            Add to Cart
+                        </button>
+                    </div>
+
+                </div>
+                <script>
+                    document.querySelectorAll('.add-to-cart').forEach(button => {
+                        button.addEventListener('click', () => {
+                            const item = {
+                                name: button.getAttribute('data-name'),
+                                price: parseFloat(button.getAttribute('data-price')),
+                                image: button.getAttribute('data-image'),
+                                dateAdded: new Date().toLocaleString()
+                            };
+
+                            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+                            cart.push(item);
+                            localStorage.setItem("cart", JSON.stringify(cart));
+
+                            alert(`${item.name} has been added to your cart.`);
+                        });
+                    });
+                </script>
+</body>
+
+</html>
